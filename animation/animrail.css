@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0; /* On gère l'espacement via la largeur du connecteur */
+  padding: 50px;
+}
+
+.box {
+  padding: 20px;
+  background: #1a1a1a;
+  border: 2px solid #00d2ff;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Le Rail */
+.connector {
+  position: relative;
+  width: 150px; /* Longueur de la ligne entre les deux div */
+  height: 2px;   /* Épaisseur du rail */
+  background: rgba(0, 210, 255, 0.2); /* Rail discret */
+}
+
+/* Le Point qui défile */
+.connector::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: #00d2ff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  
+  /* Effet néon sur le point */
+  box-shadow: 0 0 10px #00d2ff, 0 0 20px #00d2ff;
+  
+  /* Animation */
+  animation: flow 2s linear infinite;
+}
+
+@keyframes flow {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}

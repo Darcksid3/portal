@@ -1,0 +1,11 @@
+    { "id": "korben", "url": "https://korben.info/feed", "name": "Korben" },
+    { "id": "it", "url": "https://www.it-connect.fr/feed/", "name": "IT-Connect" },
+    { "id": "crabe", "url": "https://lecrabeinfo.net/feed", "name": "Le Crabe Info" },
+    { "id": "next", "url": "https://next.ink/feed/free", "name": "Next Ink"},,
+    { "id": "zataz", "url": "https://www.zataz.com/feed/", "name": "Zataz"},
+    { "id": "silicon", "url": "https://www.silicon.fr/feed", "name": "Silicon"},
+    { "id": "comptoir", "url": "https://www.comptoir-hardware.com/home.xml", "name": "Comptoir-hardware"},
+    { "id": "thehackernews", "url": "https://feeds.feedburner.com/TheHackersNews", "name": "The Hacker News"},
+    { "id": "arstechnical", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "name": "Ars Technica"}, // ajouter les autre catégorie
+    { "id": "bleepingcomputer", "url": "https,//www.bleepingcomputer.com/feed", "name": "Bleepingcomputer"},
+    { "id": "javascriptweekly", "url": "https://cprss.s3.amazonaws.com/javascriptweekly.com.xml", "name": "Javascript Weekly"},

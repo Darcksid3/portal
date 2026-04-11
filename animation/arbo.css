@@ -1,0 +1,68 @@
+body { background: #000; padding: 20px; }
+
+.tech-tree-container {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  background: #000;
+  border: 1px solid #333;
+}
+
+/* Positionnement du SVG derrière les nœuds */
+.svg-connections {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Le Style du Tracé (Le Rail discret) */
+.neon-line {
+  fill: none;
+  stroke: rgba(0, 210, 255, 0.2); /* Ligne de fond */
+  stroke-width: 2;
+}
+
+/* L'EFFET NÉON QUI DÉFILE (C'est ICI que ça se passe) */
+.neon-line::after {
+  /* En réalité, on ne peut pas utiliser ::after sur un <path> SVG. 
+     On triche en superposant une deuxième ligne ou en jouant sur les pointillés. */
+}
+
+/* Voici la méthode des pointillés animés (dashoffset) */
+.neon-line {
+  /* ... (style précédent) */
+  
+  /* On définit la lueur néon */
+  stroke: #00d2ff;
+  stroke-width: 3;
+  filter: url(#neon-glow); /* Applique le filtre défini dans le HTML */
+
+  /* On définit un segment pointillé très long (une seule 'tiret') */
+  /* dasharray: [longueur du tiret, longueur de l'espace] */
+  stroke-dasharray: 20, 1000; /* Crée un petit segment de 20px qui défile */
+  
+  /* Animation du décalage pour le faire avancer */
+  animation: flowNeon 3s linear infinite;
+}
+
+@keyframes flowNeon {
+  from { stroke-dashoffset: 1020; } /* On part de la fin cachée */
+  to { stroke-dashoffset: 0; }     /* Arrivée au début */
+}
+
+/* Style des nœuds */
+.node {
+  position: absolute;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 210, 255, 0.5);
+  border: 2px solid #00d2ff;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

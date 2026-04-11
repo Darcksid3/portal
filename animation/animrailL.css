@@ -1,0 +1,70 @@
+:root {
+  --neon-color: #00d2ff;
+  --rail-color: #333;
+}
+
+.tree-branch {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.node-item {
+  display: flex;
+  align-items: flex-end; /* Aligne l'enfant au bout du L */
+  margin-left: 40px;     /* Décalage horizontal */
+  position: relative;
+}
+
+/* Le Rail en L */
+.connector-L {
+  width: 60px;  /* Largeur du décalage */
+  height: 80px; /* Hauteur de la descente */
+  border-left: 2px solid var(--rail-color);
+  border-bottom: 2px solid var(--rail-color);
+  /* On le place pour qu'il parte du parent */
+  margin-top: -20px; 
+  margin-right: 15px;
+}
+
+/* Le Point Néon */
+.connector-L::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--neon-color);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--neon-color), 0 0 20px var(--neon-color);
+  
+  /* On lance l'animation */
+  animation: travelL 3s linear infinite;
+}
+
+/* L'ANIMATION EN DEUX ÉTAPES */
+@keyframes travelL {
+  /* Étape 1 : Le point part du haut de la ligne verticale */
+  0% {
+    top: -20px;
+    left: -5px; /* -5px pour centrer sur la bordure de 2px */
+  }
+  /* Étape 2 : Il arrive au virage (à 80px de haut) */
+  50% {
+    top: 60px;  /* Correspond à la hauteur du rail moins un petit ajustement */
+    left: -5px;
+  }
+  /* Étape 3 : Il parcourt la ligne horizontale vers la droite */
+  100% {
+    top: 60px;
+    left: 55px; /* Arrive au bout de la largeur du rail */
+  }
+}
+
+.neon-box {
+  padding: 10px 20px;
+  background: #1a1a1a;
+  border: 1px solid var(--neon-color);
+  color: white;
+  border-radius: 4px;
+}

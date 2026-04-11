@@ -1,0 +1,43 @@
+
+.k2000 {
+/* On réinitialise le style par défaut du hr */
+width: 25%;
+border: none;
+height: 8px;
+background-color: #330000; /* La ligne de fond sombre */
+position: relative;
+overflow: hidden;
+border-radius: 10px;
+}
+
+.k2000::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 15%; /* Largeur du faisceau laser */
+
+/* Dégradé pour l'effet de traîne du laser */
+background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    #ff0000 50%, 
+    transparent 100%
+);
+
+/* Lueur néon */
+box-shadow: 0 0 10px #ff0000, 0 0 5px #ff0000;
+
+/* L'animation */
+animation: moveScanner 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes moveScanner {
+from {
+    left: -15%;
+}
+to {
+    left: 100%;
+}
+}

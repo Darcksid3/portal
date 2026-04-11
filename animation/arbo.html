@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="arbo.css">
+    </head>
+    <body>
+        <div class="tech-tree-container">
+  
+  <svg class="svg-connections" width="100%" height="100%">
+    <defs>
+      <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+    
+    <path class="neon-line" d="M 50 50 L 250 180" />
+  </svg>
+  
+  <div class="node point-a" style="top: 50px; left: 50px;">A</div>
+  <div class="node point-b" style="top: 180px; left: 250px;">B</div>
+  
+</div>
+    </body>
+</html>

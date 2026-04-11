@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>portal live</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <header>
+            <h1>Portal Live</h1>
+            <nav>
+                <ul>
+                    <li><a href="flux/flux2.html">Flux</a></li>
+                </ul>
+            </nav>
+            <fieldset>
+                <legend>Web - Search</legend>
+                <!-- <select name="select-moteur" id="select-moteur">
+                    <option id="0" value="https://duckduckgo.com/">Duck&Go</option>
+                    <option id="1" value="https://duckduckgo.com/">Google</option>
+                </select> -->
+                <div class="container">
+                    <form method="GET" action="https://duckduckgo.com/">
+                        <div>Duck & Go</div>
+                        <input type="text" name="q" id="q">
+                        <button type="submit" class="button">Recherché !</button>
+                    </form>
+                    <form name="google" method="get" action="https://www.google.fr/search">
+                        <div>Google</div>
+                        <input type="text" name="q" id="q">
+                        <button type="submit" class="button">Recherché !</button>
+                    </form>
+                </div>
+            </fieldset>
+            
+        </header>
+        <main>
+            <div class="lanceur">
+                <div class="container">
+                    <section>
+                        <h2>Back-end server</h2>
+                        <article class="container">
+                            <div class="object-right">
+                                <h3>PHP - Local</h3>
+                                <a href="http://localhost:8000">php 8000</a>
+                            </div>
+                            <div class="object-right">
+                                <h3>Node - Local</h3>
+                                <a href="http://localhost:5173">node 5173</a>
+                            </div>
+                        </article>
+                    </section>
+                    <section>
+                        <h2>Front-end server</h2>
+                        <article class="container">
+                            <div class="object-left ">
+                                <h3>Live Server</h3>
+                                <a href="http://localhost:5500">Live Server 5500</a>
+                            </div>
+                            <div class="object-left">
+                                <h3>N8N global</h3>
+                                <a href="http://localhost:5678" target="_blank">N8N Global</a>
+                            </div>
+                            
+                        </article>
+                    </section>
+                </div>
+                <section>
+                    <h2>Docker</h2>
+                    <article class="container">
+                        <div class="object">
+                            <h3>Mariadb</h3>
+                            <a href="http://localhost:3306">MariaDb 3306</a>
+                        </div>
+                        <div class="object">
+                            <h3>PhpMyAdmin</h3>
+                            <a href="http://localhost:8080">PhpMyAdmin 8080</a>
+                        </div>
+                        <div class="object">
+                            <h3>PostgresSql</h3>
+                            <a href="http://localhost:5432">PostgresSql 5432</a>
+                        </div>
+                        <div class="object">
+                            <h3>MongoDb</h3>
+                            <a href="http://localhost:27017">MongoDb 27017</a>
+                        </div>
+                        <div class="object">
+                            <h3>IT-Tool</h3>
+                            <a href="http://it-tools.local">IT-Tool</a>
+                        </div>
+                        <div class="object">
+                            <h3>Glances</h3>
+                            <a href="http://localhost:61208">Glances 61208</a>
+                        </div>
+                        <div class="object">
+                            <h3>Nginx</h3>
+                            <a href="http://localhost:81" target="_blank">Nginx 81</a>
+                        </div>
+                        <div class="object">
+                            <h3>N8N</h3>
+                            <a href="http://n8n.Darcksid3.local" target="_blank">N8N</a>
+                        </div>
+                    </article>
+                </section>
+            </div>
+
+            <div class="info">
+                <aside>
+                    <h3>Code d'état HTTP</h3>
+                    <p><strong>200 : </strong>OK</p>
+                    <p><strong>201 : </strong>Créé</p>
+                    <p><strong>301 : </strong>Déplacé Définitivement</p>
+                    <p><strong>400 : </strong>Mauvaise Requête</p>
+                    <p><strong>401 : </strong>Non Autorisé</p>
+                    <p><strong>403 : </strong>Interdit</p>
+                    <p><strong>404 : </strong>Non Trouvé</p>
+                    <p><strong>408 : </strong>Erreur de Delais d'Attente</p>
+                    <p><strong>500 : </strong>Erreur interne du Serveur</p>
+                    <p><strong>503 : </strong>Service Indisponible</p>
+                </aside>
+                
+            </div>
+        </main>
+        <footer>
+            <hr>
+            <p> All right reserved &copy Đarcksid3.dev 2026 </p>
+        </footer>
+    </body>
+</html>
