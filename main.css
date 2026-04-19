@@ -1,13 +1,23 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 main {
-    align-content: center;
     width: 100%;
     display: flex;
     flex-direction: row;
+    flex: 1;
     justify-content: space-between;
+    align-items: center;
 }
 
 footer {
     text-align: center;
+    margin-top:2rem;
 }
 
 h2 {
@@ -73,7 +83,7 @@ fieldset {
 }
 
 .info {
-
+    height: fit-content;
     border: 2px solid red;
     border-radius: 0.5rem;
     box-shadow: -5px 5px pink;
@@ -81,9 +91,14 @@ fieldset {
     display: flex;
     flex-direction: column;
     align-items: center;
+    contain: content;
 }
+
 .info h3 {
     text-align: center;
 }
 
+.border-test {
+    border: 1px solid red;
+}
 

@@ -1,0 +1,65 @@
+/* --- Style de base pour tes blocs conteneurs --- */
+/* (Ajuste le border-radius ici pour qu'il corresponde à ton design) */
+.object, .object-right, .object-left {
+    position: relative;
+    border: 1px solid rgba(0, 242, 255, 0.1); /* Fine bordure guide, optionnelle */
+    border-radius: 10px; /* Tes coins arrondis */
+    overflow: hidden; /* Important pour que le point ne "bave" pas en dehors pendant les calculs */
+}
+
+/* --- Le point néon commun à tous --- */
+.object::before,
+.object-right::before,
+.object-left::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #00f2ff;
+    border-radius: 50%; /* Point bien rond */
+    
+    /* L'effet néon puissant */
+    box-shadow: 
+        0 0 5px #00f2ff,
+        0 0 10px #00f2ff,
+        0 0 20px #00d4ff;
+    
+    z-index: 10;
+    
+    /* --- LE SECRET : DÉFINIR LE CHEMIN --- */
+    /* 1. On crée un rectangle (rect) qui fait 100% de la div. */
+    /* 2. 'rx' doit être égal à ton border-radius (ici 10px). */
+    offset-path: rect(0% 100% 100% 0% round 10px);
+    
+    /* On force le point à être centré sur le chemin */
+    offset-anchor: center;
+}
+
+/* --- Animation vers la DROITE (Sens horaire) --- */
+.object-right::before,
+.object::before { /* Par défaut, les autres vont aussi à droite */
+    animation: moveRoundClockwise 4s linear infinite;
+}
+
+@keyframes moveRoundClockwise {
+    from {
+        offset-distance: 0%; /* Départ coin haut-gauche */
+    }
+    to {
+        offset-distance: 100%; /* Arrivée coin haut-gauche après le tour */
+    }
+}
+
+/* --- Animation vers la GAUCHE (Sens anti-horaire) --- */
+.object-left::before {
+    animation: moveRoundAntiClockwise 4s linear infinite;
+}
+
+@keyframes moveRoundAntiClockwise {
+    from {
+        offset-distance: 100%; /* Départ (revient en arrière) */
+    }
+    to {
+        offset-distance: 0%; /* Arrivée (reculer jusqu'au départ) */
+    }
+}
