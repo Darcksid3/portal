@@ -15,6 +15,21 @@ main {
     align-items: center;
 }
 
+header {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul {
+    display: inline;
+}
+
+header ul a {
+    color: black;
+}
+
 footer {
     text-align: center;
     margin-top:2rem;
@@ -32,12 +47,13 @@ hr {
 fieldset {
     width: 50%;
     border-color: blueviolet;
+    border-radius: 10px;
     color: blue;
     margin-bottom: 0.5rem;
 }
 
 .button {
-    border-radius: 50%;
+    border-radius: 5px;
     border-color: blue;
     background-color: cadetblue;
     color: blueviolet;
