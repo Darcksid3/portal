@@ -6,6 +6,37 @@ body {
     flex-direction: column;
 }
 
+header {
+    width: 100%;
+    margin: 2rem;
+    border-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    color: brown;
+}
+header nav p a {
+    margin-right: 1rem;
+    padding: 0.5rem;
+    color: black;
+    border: 1px solid brown;
+    border-radius: 5px;
+    background-color: navajowhite;
+}
+
+header fieldset {
+    text-align: center;
+    width: fit-content;
+    border-color: blueviolet;
+    border-radius: 10px;
+    color: blue;
+    margin-bottom: 0.5rem;
+    contain: content;
+}
+
 main {
     width: 100%;
     display: flex;
@@ -13,21 +44,6 @@ main {
     flex: 1;
     justify-content: space-between;
     align-items: center;
-}
-
-header {
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-header ul {
-    display: inline;
-}
-
-header ul a {
-    color: black;
 }
 
 footer {
@@ -44,13 +60,6 @@ hr {
     border: 3px solid rgba(77, 5, 93, 0.734);
 }
 
-fieldset {
-    width: 50%;
-    border-color: blueviolet;
-    border-radius: 10px;
-    color: blue;
-    margin-bottom: 0.5rem;
-}
 
 .button {
     border-radius: 5px;
