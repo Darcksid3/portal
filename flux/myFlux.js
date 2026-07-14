@@ -1,6 +1,6 @@
 // { id: '', url: '', name: ''} a diviser en section plus stricte
 const sites = [
-    { id: 'korben', url: 'https://korben.info/feed', name: 'Korben' },
+    { id: 'korben', url: 'https://korben.info/feedfull', name: 'Korben' },
     { id: 'it', url: 'https://www.it-connect.fr/feed/', name: 'IT-Connect' },
     { id: 'crabe', url: 'https://lecrabeinfo.net/feed', name: 'Le Crabe Info' },
     { id: 'next', url: 'https://next.ink/feed/free', name: 'Next Ink'},
